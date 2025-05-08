@@ -1,1 +1,14 @@
+<div class="container mt-5">
+  <h2>My Bookings</h2>
+  <!-- Example: Show a message if there are no bookings -->
+  <div *ngIf="!bookings || bookings.length === 0">
+    <p>You have no bookings yet.</p>
+  </div>
+  <!-- Example: List bookings if available -->
+  <ul *ngIf="bookings && bookings.length > 0">
+    <li *ngFor="let booking of bookings">
+      Car: {{ booking.carName }} | Date: {{ booking.date }}
+    </li>
+  </ul>
+</div>
 <p>my-booking works!</p>

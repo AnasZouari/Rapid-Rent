@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { SearchComponent } from './pages/search/search.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { MyBookingComponent } from './pages/my-booking/my-booking.component';
+import { SearchComponent } from './pages/search/search.component';
 
 export const routes: Routes = [
     {

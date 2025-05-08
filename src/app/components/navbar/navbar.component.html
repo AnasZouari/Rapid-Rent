@@ -11,22 +11,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link"  href="index.html">HOME</a>
+            <a class="nav-link"  href="home">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.html">SEARCH CAR</a>
+            <a class="nav-link" href="search">SEARCH CAR</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="my-booking">MY BOOKINGS</a>
+            <a class="nav-link" href="booking">MY BOOKINGS</a>
           </li>
         </ul>
-        <div class="d-flex" id="authButtons">
-          <button class="btn btn-outline-light me-2"data-bs-toggle="modal" data-bs-target="#authModal" (click)="authRef.setAuthType('login')">Login</button>
-          <button class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#authModal"(click)="authRef.setAuthType('signup')">Sign Up</button>
+        <div class="d-flex" *ngIf="!user">
+          <button class="btn btn-outline-light me-2" (click)="openAuthModal('login')">Login</button>
+          <button class="btn btn-outline-light" (click)="openAuthModal('signup')">Sign Up</button>
         </div>
-        <div class="d-none" id="userInfo">
-          <span class="text-light me-3" id="userName"></span>
-          <button class="btn btn-outline-light" onclick="logout()">Logout</button>
+        <div class="d-none" *ngIf="user">
+          <span class="text-light me-3">{{user.username}}</span>
+          <button class="btn btn-outline-light" (click)="logout()">Logout</button>
         </div>
         
       </div>

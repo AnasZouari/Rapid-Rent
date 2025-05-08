@@ -11,8 +11,8 @@ export class AuthService {
     console.log('User logged in:', this.currentUser);
   }
 
-  signup(username: string, email: string) {
-    this.currentUser = { username, email };
+  signup(username: string, email: string, mobileNo: String) {
+    this.currentUser = { username, email, mobileNo };
     console.log('User signed up:', this.currentUser);
   }
 

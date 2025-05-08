@@ -46,4 +46,5 @@ export class CarListComponent {
       price: 98
     }
   ];
+rentCar: any;
 }
